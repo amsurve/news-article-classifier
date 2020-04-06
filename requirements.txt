@@ -7,10 +7,11 @@ click==7.1.1
 cssselect==1.1.0
 cycler==0.10.0
 cymem==2.0.3
-https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-2.1.0/en_core_web_sm-2.1.0.tar.gz#egg=en_core_web_sm==2.1.0
+en-core-web-sm==2.1.0
 feedfinder2==0.0.4
 feedparser==5.2.1
 Flask==1.1.2
+gunicorn==20.0.4
 idna==2.9
 importlib-metadata==1.6.0
 itsdangerous==1.1.0
