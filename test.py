@@ -6,9 +6,9 @@ import pickle
 import scrape_link
 import clean_text
 # %%
-tf1 = pickle.load(open("/Users/amsurve/PROJECTS/gg2/models/tfidf1.pkl", 'rb'))
-rfc = pickle.load(open("/Users/amsurve/PROJECTS/gg2/models/rfc.pkl", 'rb'))
-# tf1 = pickle.load(open("tfidf1.pkl", 'rb'))
+tf1 = pickle.load(open("models/tfidf1.pkl", 'rb'))
+rfc = pickle.load(open("models/rfc.pkl", 'rb'))
+logc = pickle.load(open("models/logc.pkl", 'rb'))
 
 
 # %%
@@ -28,5 +28,10 @@ x = tf1.transform(cleaned_text)
 # %%
 rfc.predict(x)[0]
 print(rfc.predict(x)[0])
+
+logc.predict(x)[0]
+print(rfc.predict(x)[0])
+
+
 # {'tech':0,'business':1,'sport':2,'entertainment':3,'politics':4}
 # %%

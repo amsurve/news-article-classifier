@@ -1,5 +1,4 @@
 # %%
-import spacy
 import string
 import textblob
 import re
@@ -14,8 +13,9 @@ from nltk.corpus import stopwords
 nltk.download('averaged_perceptron_tagger')
 from nltk.stem import WordNetLemmatizer
 from nltk.corpus import wordnet
-spacy_nlp = spacy.load('en_core_web_sm')
 import pandas as pd
+from nltk.tokenize import MWETokenizer, word_tokenize
+
 
 # %%
 cList = {
@@ -161,14 +161,14 @@ def expandContractions(text, c_re=c_re):
 
 
 def tokenize_and_remove_punct(text):
-    doc = spacy_nlp(text)
-    words = []
-    for token in doc:
-        t = token.text
-        t = t.translate(str.maketrans('', '', string.punctuation))
-        if t.isalpha():
-            words.append(t)
-    return words
+  text = text.translate(str.maketrans('', '', string.punctuation))
+  mtokenizer = MWETokenizer()
+  mwe = mtokenizer.tokenize(text.split())
+  words =[]
+  for t in mwe:
+    if t.isalpha():
+      words.append(t)
+  return words
 
 
 def tags(tokens):
@@ -219,6 +219,6 @@ if __name__ == "__main__":
     for t in df['text']:
         cleaned_text.append(pipe.transform([t])[0])
     df['cleaned_text'] = cleaned_text
-    df.to_csv('/Users/amsurve/PROJECTS/gg2/data/bbc_df.cleaned.csv')
+    df.to_csv('/Users/amsurve/PROJECTS/gg2/data/bbc_cleaned.csv')
 
 # %%

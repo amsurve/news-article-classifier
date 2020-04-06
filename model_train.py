@@ -10,7 +10,7 @@ from sklearn.model_selection import cross_val_score
 import pickle
 
 # %%
-df = pd.read_csv('/Users/amsurve/PROJECTS/gg2/data/bbc_cleaned.csv')
+df = pd.read_csv('data/bbc_cleaned.csv')
 
 # %%
 df.head()
@@ -22,7 +22,7 @@ df.drop(['Unnamed: 0','Unnamed: 0.1'],1,inplace = True)
 df.head()
 
 # %%
-tf1 = pickle.load(open("/Users/amsurve/PROJECTS/gg2/models/tfidf1.pkl", 'rb'))
+tf1 = pickle.load(open("models/tfidf1.pkl", 'rb'))
 
 
 # %%
@@ -55,6 +55,6 @@ logc_scores = cross_val_score(logc, X, y, cv=5,scoring='accuracy')
 rfc_scores = cross_val_score(rfc, X, y, cv=5,scoring='accuracy')
 print(rfc_scores.mean())
 #%%
-pickle.dump(rfc, open("/Users/amsurve/PROJECTS/gg2/models/rfc.pkl", "wb"))
-pickle.dump(logc, open("/Users/amsurve/PROJECTS/gg2/models/logc.pkl", "wb"))
+pickle.dump(rfc, open("models/rfc.pkl", "wb"))
+pickle.dump(logc, open("models/logc.pkl", "wb"))
 
