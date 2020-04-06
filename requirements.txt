@@ -22,7 +22,7 @@ dash-table==4.6.0
 dateparser==0.7.2
 decorator==4.4.1
 defusedxml==0.6.0
-en-core-web-sm==2.2.5
+-e https://github.com/explosion/spacy-models/releases/download/en_vectors_web_lg-2.1.0/en_vectors_web_lg-2.1.0.tar.gz#egg=en_core_web_sm
 entrypoints==0.3
 feedfinder2==0.0.4
 feedparser==5.2.1
