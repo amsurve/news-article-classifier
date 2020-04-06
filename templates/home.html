@@ -10,9 +10,11 @@
 	<header>
 		<div class="container">
 		<div id="brandname">
-			NLP Project J049 & J050
+			<h2>News classifier</h2>
+            <h3>Predicts if article is among the following categories: [tech, business, sport, entertainment, politics]</h3>
+
 		</div>
-		<h2>News classifier</h2>
+
 		
 	</div>
 	</header>
@@ -20,7 +22,8 @@
 	<div class="ml-container">
 
 		<form action="{{ url_for('predict')}}" method="POST">
-		<p>Paste news article url or news article text in box</p>
+        <p style="color:firebrick;"> <b>Either paste news article url or the news article text in box</b></p>
+
 		<!-- <input type="text" name="comment"/> -->
 		<textarea name="message" rows="4" cols="50"></textarea>
 		<br/>
