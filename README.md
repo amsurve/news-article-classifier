@@ -1,13 +1,13 @@
 # NLP project
 
-Project by
-- Hrithika Shukla(J049)
-- Atharva Surve(J050)
+### App url : https://newsclassify.herokuapp.com/ 
 
-App url : https://newsclassify.herokuapp.com/ 
+>**Project by**
+> - Hrithika Shukla (J049)
+> - Atharva Surve(J050)
 
 
-
+---
 
 >  **Training approach**  
 > - Transformed raw data and stored it to csv using [generate_csv.py](https://github.com/amsurve/news-article-classifier/blob/master/generate_csv.py)
