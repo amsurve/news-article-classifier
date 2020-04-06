@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+	<header>
+		<div class="container">
+		<div id="brandname">
+			ML App
+		</div>
+		<h2>News classifier</h2>
+		
+	</div>
+	</header>
+    
+	<div class="results">
+		
+	{% if prediction == 0%}
+	<h2 style="color:green;">The category of article is Tech</h2>
+	{% elif prediction == 1%}
+    <h2 style="color:skyblue;">The category of article is Business</h2>
+    {% elif prediction == 2%}
+    <h2 style="color:purple;">The category of article is Sport</h2>
+    {% elif prediction == 3%}
+    <h2 style="color:orange;">The category of article is Entertainment</h2>
+    {% elif prediction == 4%}
+    <h2 style="color:red;">The category of article is Politics</h2>
+	{% endif %}
+
+	</div>
+
+</body>
+</html>
+
