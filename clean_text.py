@@ -199,6 +199,7 @@ def stopword_removal(words):
         word_filtered.append(w)
   unique = list(dict.fromkeys(word_filtered))
   return " ".join(unique)
+
 #%%
 def pipelinize(function, active=True):
     def list_comprehend_a_function(list_or_series, active=True):

@@ -26,6 +26,7 @@ for f in path_li:
 # %%
 df = pd.DataFrame(bbc_dict)
 
+
 # %%
 if __name__ == '__main__':
     df.to_csv('/Users/amsurve/PROJECTS/gg2/data/bbc_df.csv')
