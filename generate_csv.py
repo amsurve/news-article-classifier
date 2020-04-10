@@ -1,8 +1,7 @@
 #%%
 import os
 import pandas as pd
-import glob 
-
+import glob
 # %%
 folder = '/Users/amsurve/PROJECTS/gg2/data/bbc/'
 
